@@ -24,15 +24,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased m-6`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased p-6 w-screen h-screen`}
       >
-        <Header />
-        <div className="grid grid-cols-3">
-          <div className="col-span-1">
-            <Sidebar />
+        <div className="grid grid-rows-6 h-full w-full">
+          <div className="row-span-1 bg-red-500">
+            <Header />
           </div>
-          <div className="col-span-2">
-            {children}
+          <div className="row-span-5 bg-purple-500 h-full">
+            <div className="grid grid-cols-3 w-full h-full">
+              <div className="col-span-1 bg-pink-500">
+                <Sidebar />
+              </div>
+              <div className="col-span-2 bg-purple-500">
+                {children}
+              </div>
+            </div>
           </div>
         </div>
       </body>

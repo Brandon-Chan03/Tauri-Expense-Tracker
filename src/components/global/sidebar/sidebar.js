@@ -17,9 +17,9 @@ const printFromRust = () => {
 
 const Sidebar = () => {
   return (
-    <div className="bg-blue-500">
+    <div className="bg-green-500 h-full">
       <nav>
-        <ul className="flex flex-col h-screen gap-6">
+        <ul className="flex flex-col gap-6">
           {navLinks.map((link, index) => (
             <li
               className="text-lg"
