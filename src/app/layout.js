@@ -1,3 +1,6 @@
+import Header from "@/components/global/header/header";
+import Sidebar from "@/components/global/sidebar/sidebar";
+
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -21,9 +24,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased m-6`}
       >
-        {children}
+        <Header />
+        <div className="grid grid-cols-3">
+          <div className="col-span-1">
+            <Sidebar />
+          </div>
+          <div className="col-span-2">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
